@@ -10,16 +10,83 @@
 </head>
 
 <body>
-  <div>
+  <div class="form-group">
     <h1 id="title">King Computing Services Survey Form</h1>
   </div>
-  <div>
+  <div class="form-group">
     <p id="description">We appreciate your feedback regarding our services</p>
   </div>
-  <div>
+  <div class="form-group">
     <form action="input" id="survey-form">
-      <input type="text" name="name" placeholder="Name" id="name" required>
-      <input type="email" placeholder="Email" id="email" required>
+      <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" name="name" placeholder="Enter your name" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" placeholder="Enter your email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="number" id="number-label">Age (optional)</label>
+        <input type="number" placeholder="Age" id="number" min="1" max="120" required>
+      </div>
+      <div class="form-group">
+        <p>Which device requires service</p>
+        <select name="dropdown" id="dropdown" class="form-control" required>
+          <option disabled selected value="">Select device</option>
+          <option value="Windows Desktop">Windows Desktop</option>
+          <option value="Macbook">Macbook</option>
+          <option value="iPad">iPad</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <p>Please choose your operating system</p>
+        <label for="radio">
+          <input type="radio" name="operating-system" value="Windows 10" class="input-radio">
+          Windows 10
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="radio">
+          <input type="radio" name="operating-system" value="Windows 7" class="input-radio">
+          Windows 7
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="radio">
+          <input type="radio" name="operating-system" value="macOS X" class="input-radio">
+          macOS X
+        </label>
+      </div>
+      <div class="form-group">
+        <p>Which issue best describes the problem?</p>
+        <label for="issue">
+          <input type="checkbox" name="issue" value="Computer won't boot">
+          Computer won't boot
+        </label>
+        <label for="issue">
+          <input type="checkbox" name="issue" value="Hard drive crashed">
+          Hard drive crashed
+        </label>
+        <label for="issue">
+          <input type="checkbox" name="issue" value="Battery won't stay charged">
+          Battery won't stay charged
+        </label>
+        <label for="issue">
+          <input type="checkbox" name="issue" value="Cannot connect to the internet">
+          Cannot connect to the internet
+        </label>
+      </div>
+      <div class="form-group">
+        <p>Please describe your issue in detail</p>
+        <textarea name="desc" id="desc" cols="30" rows="10" class="input-textarea"
+          placeholder="Describe your issue..."></textarea>
+      </div>
+      <div>
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+      </div>
+
+
     </form>
   </div>
 
